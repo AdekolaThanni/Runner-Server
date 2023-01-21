@@ -29,8 +29,8 @@ exports.takePayment = catchErrors(async (req, res, next) => {
     payment_method_types: ["card"],
     mode: "payment",
     line_items: products,
-    success_url: `https://runner-store.herokuapp.com/bag?success=true`,
-    cancel_url: `https://runner-store.herokuapp.com/bag?canceled=true`,
+    success_url: `https://https://runner-jb71.onrender.com/bag?success=true`,
+    cancel_url: `https://https://runner-jb71.onrender.com/bag?canceled=true`,
   });
 
   res.status(200).json({

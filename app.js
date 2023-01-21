@@ -4,6 +4,7 @@ const mongoSanitize = require("express-mongo-sanitize");
 const xss = require("xss-clean");
 // const hpp = require("hpp");
 const cookieParser = require("cookie-parser");
+const cors = require("cors");
 
 const productRouter = require("./routers/productRouter");
 const userRouter = require("./routers/userRouter");
@@ -25,6 +26,8 @@ app.use(
 
 // Parse cookies
 app.use(cookieParser());
+
+app.use(cors());
 
 // Sanitize request from manipulating mongoDB database
 app.use(mongoSanitize());
