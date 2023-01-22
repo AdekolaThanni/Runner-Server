@@ -14,6 +14,8 @@ const { takePayment } = require("./controllers/paymentController");
 
 const app = express();
 
+app.use(cors());
+
 // Limit request limit
 app.use(
   "/api",
@@ -26,8 +28,6 @@ app.use(
 
 // Parse cookies
 app.use(cookieParser());
-
-app.use(cors());
 
 // Sanitize request from manipulating mongoDB database
 app.use(mongoSanitize());
